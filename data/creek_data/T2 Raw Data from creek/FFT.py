@@ -10,16 +10,14 @@ from scipy.signal import detrend
 # Load dataset
 #file_path = "SPIE7/277070001.csv"  # Update this with the correct file path
 file_path = "SPIE4/277000001.csv"
+
 df = pd.read_csv(file_path)
-print(df.columns)
-# Update column names accordingly
-time_column = "NMR signal (mV)"  # Column containing time data
-signal_column = "time (s)"  # Column containing signal values
+
 
 # Extract time and signal data
-time = df["NMR signal (mV)"]
-signal = df["time (s)"]
-#signal = signal - np.mean(signal)
+signal = df["NMR signal (mV)"].values
+time = df["time (s)"].values
+signal = signal - np.mean(signal)
 #signal = detrend(signal)
 print(signal)
 
@@ -38,6 +36,6 @@ plt.figure(figsize=(10, 5))
 plt.plot(freqs[:n//2], np.abs(fft_values[:n//2]))  # Plot only positive frequencies
 plt.xlabel("Frequency (Hz)")
 plt.ylabel("Magnitude")
-plt.title("FFT of the Signal")
+plt.title("FFT of the Signal from: "+file_path)
 plt.grid()
 plt.show()
