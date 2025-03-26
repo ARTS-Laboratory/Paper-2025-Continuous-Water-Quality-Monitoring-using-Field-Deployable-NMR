@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 # Folder containing the CSV files
-folder_path = "C:/Users/MK92/OneDrive - University of South Carolina/Paper-2025-Continuous-Water-Quality-Monitoring-using-Field-Deployable-NMR/data/creek_data/T2 Raw Data from creek/SPIE7"  # Update with the correct folder path
+folder_path = "SPIE7/"  # Update with the correct folder path
 
 # Loop through all CSV files in the folder
 for filename in os.listdir(folder_path):
