@@ -15,9 +15,10 @@ Cite this data as:
 
 #### Bibtex
 
-@Misc{AHancockPaper2025Continuous,    
+@Misc{Hancock2025Paper2025Continuous,    
   author = {Daniel Hancock and David P. Wamai and Md Asifuzzaman Khan and Austin {R.J.} Downey and Mohammed Baalousha and Thomas M. Crawford},  
   howpublished = {GitHub},  
+  year = {2025},   
   title  = {Paper-2025-Continuous-Water-Quality-Monitoring-using-Field-Deployable-NMR},  
   groups = {ARTS-Lab},    
   url    = {https://github.com/ARTS-Laboratory/Paper-2025-Continuous-Water-Quality-Monitoring-using-Field-Deployable-NMR},   
