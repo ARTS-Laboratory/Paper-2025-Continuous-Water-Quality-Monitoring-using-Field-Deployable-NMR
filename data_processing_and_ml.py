@@ -1870,7 +1870,7 @@ t = normalize_array(temperature)
 p = normalize_array(pH)
 tur = normalize_array(turbidity)
 c = normalize_array(conductivity)
-T = normalize_array(T2_times)
+#T = normalize_array(T2_times)
 norms = []
 norms.append(m)
 norms.append(a)
@@ -1920,16 +1920,59 @@ plt.ylabel('normalized feature value')
 plt.savefig('creek_norms.png', bbox_inches='tight',dpi=300)
 plt.show()
 #%%
-plt.plot(times,conductivity)
+plt.plot(np.arange(0,len(s)),s)
 plt.show()
+#%%
+len(Y)
+#%%
+k = []
+j = 0
+for i in s:
+    if i < 0.6 and j > 190 and j < 900:
+        k.append(j)
+    elif i < 0.4 and j < 100:
+        k.append(j)
+    elif i < 0.2 and j < 190 and j > 100:
+        k.append(j)
+    elif i < 0.2 and j > 900 and j < 1020:
+        k.append(j)
+    j = j + 1
+#%%
+j = 0
+for i in k:
+    #Larmor.pop(i-j)
+    parameters.pop(i-j)
+    turbidity.pop(i-j)
+    pH.pop(i-j)
+    temperature.pop(i-j)
+    conductivity.pop(i-j)
+    larmor_frequencies.pop(i-j)
+    trial_numbers.pop(i-j)
+    times.pop(i-j)
+    #concentrations.pop(i-j)
+    amp.pop(i-j)
+    Y.pop(i-j)
+    mean.pop(i-j)
+    kurtosis.pop(i-j)
+    rms.pop(i-j)
+    shape_factor.pop(i-j)
+    skewness.pop(i-j)
+    impulse_factor.pop(i-j)
+    crest_factor.pop(i-j)
+    std.pop(i-j)
+    j = j + 1
+#%%
+y = np.array(Y)[k]
+#%%
+
 #%%
 import csv
 #%%
 data_trial = np.arange(0,len(Y))
 j = 0
-for i in Y:
+for i in y:
 
-    with open('C:/Users/DRH6/OneDrive - University of South Carolina/processed_t2/' + str(data_trial[j]) + '.csv', 'w',newline='') as csvfile:
+    with open('C:/Users/DRH6/OneDrive - University of South Carolina/std_spike_t2/' + str(data_trial[j]) + '.csv', 'w',newline='') as csvfile:
         csv_writer = csv.writer(csvfile)
         for val in i:
             csv_writer.writerow([val])
