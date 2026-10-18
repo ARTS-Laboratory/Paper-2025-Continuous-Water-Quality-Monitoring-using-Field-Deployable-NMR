@@ -1,7 +1,6 @@
 # Paper-2025-Continuous-Water-Quality-Monitoring-using-Field-Deployable-NMR
-Data and code for the 2025 SPIE Defense paper "Continuous Water Quality Monitoring using Field Deployable NMR"
-
-
+Data and code for the 2025 SPIE Defense paper:
+* Daniel Hancock, David P. Wamai, Md Asifuzzaman Khan, Winford Janvrin, Austin R. J. Downey, Mohammed Baalousha, and Thomas M. Crawford. Continuous water quality monitoring using field deployable NMR and explainable AI. In Weilin Hou, Linda J. Mullen, and Jarom Jackson, editors, Ocean Sensing and Monitoring XVII, page 15. SPIE, May 2025. doi:10.1117/12.3052964
 
 
 ## Licensing and Citation
