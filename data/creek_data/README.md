@@ -1,7 +1,5 @@
 # Creek data
 
-All the data files in this folder are derrived from T2 Raw data, except for pH, turbidity, temperature and conductivity. They are from the [in-stu water quality sensor](https://github.com/ARTS-Laboratory/In-Situ-Water-Quality-Sensor/tree/main/System_development/Jocassee/V0.6.0).  
-
 Field deployment at Rocky Branch Creek, downtown Columbia, SC. One continuous run of about 17.6 h starting 13 March 2025: the flow-through NMR logged T2 curves while the [in-situ water-quality sensor](https://github.com/ARTS-Laboratory/In-Situ-Water-Quality-Sensor/tree/main/System_development/Jocassee/V0.6.0) logged pH, temperature, turbidity and conductivity.
 
 ## Contents
